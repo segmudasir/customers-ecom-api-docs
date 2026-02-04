@@ -278,9 +278,8 @@ Example response:
 
 ```
 {
-    "message": "Order added successfully",
-    "OrderID": 1374,
-    "TotalAmount": 59.97
+    "Message": "Order successfully created",
+    "OrderID": 1770167265321
 }
 ```
 
@@ -310,22 +309,26 @@ Example response:
 ```
 [
     {
-        "OrderID": 1001,
-        "CustomerName": "Antonio Moreno",
-        "Product": "Electric Scooter",
-        "Price": 519.99,
-        "Quantity": 3,
-        "OrderDate": "2/12/2025",
-        "TotalAmount": 1559.97
+        "OrderID": 1770167113382,
+        "CustomerName": "Mudasir",
+        "Email": "perdesi88@gmail.com",
+        "ProductID": 5,
+        "ProductName": "Boys' Summer Short Sleeve",
+        "Price": 19.99,
+        "Quantity": 1,
+        "OrderDate": "2026-02-04",
+        "TotalAmount": 19.99
     },
     {
-        "OrderID": 1002,
-        "CustomerName": "Anabela Domingues",
-        "Product": "Smart Watch",
-        "Price": 79.99,
-        "Quantity": 5,
-        "OrderDate": "1/17/2025",
-        "TotalAmount": 399.95
+        "OrderID": 1770167265321,
+        "CustomerName": "Mudasir",
+        "Email": "perdesi88@gmail.com",
+        "ProductID": 4,
+        "ProductName": "USB-C Power Bank",
+        "Price": 59.99,
+        "Quantity": 1,
+        "OrderDate": "2026-02-04",
+        "TotalAmount": 59.99
     }
 ]
 ```
@@ -357,13 +360,15 @@ Example response:
 
 ```
 {
-    "OrderID": 1374,
-    "CustomerName": "Muhammad Mudasir",
-    "Product": "Boys' Summer Short Sleeve",
-    "Price": 19.99,
-    "Quantity": 3,
-    "OrderDate": "2/12/2025",
-    "TotalAmount": 59.97
+    "OrderID": 1770167265321,
+    "CustomerName": "Mudasir",
+    "Email": "perdesi88@gmail.com",
+    "ProductID": 4,
+    "ProductName": "USB-C Power Bank",
+    "Price": 59.99,
+    "Quantity": 1,
+    "OrderDate": "2026-02-04",
+    "TotalAmount": 59.99
 }
 ```
 
@@ -384,7 +389,7 @@ Example request body:
 
 ```
 {
-  "OrderID": "1374"
+  "OrderID": 1770167265321
 }
 ```
 **Status codes**
@@ -400,6 +405,6 @@ Example response:
 
 ```
 {
-    "message": "Order with ID 1374 has been deleted successfully"
+    "message": "Order with ID 1770167265321 has been deleted successfully"
 }
 ```
