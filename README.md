@@ -250,23 +250,17 @@ The request body needs to be in JSON format.
 | Name            | Type   | In     | Required | Description                          |
 | --------------- | ------ | ------ | -------- | ------------------------------------ |
 | `Authorization` | string | header | Yes      | The bearer token of the API client.  |
-| `CustomerName`        | string | body   | Yes      | The name of cutomer              |
-| `Product`  | string | body   | Yes      | The name of the product.            |
-| `Price`       | Number (float) | body   | Yes       | Price of the product e.g., 19.99. |
+| `ProductID`  | number | body   | Yes      | ID of the product.            |
 | `Quantity`       | Number | body   | Yes       | Quantity of the product. |
-| `OrderDate`       | string (date-time) | body   | Yes       | Order date in "2/12/2025" format. |
 
-Note: All the parameters are mandatory.
+Note: On the basis of ProductID, it will go to Products table, Search for ProductID then will fill (insert data into records), ProductName, Price, Inserts Order data, Total Price which is product of Price and Quanity, and OrderID will be generated and will be shown in the reponse section.
 
 Example request body:
 
 ```
 {
-  "CustomerName": "Muhammad Mudasir",
-  "Product": "Boys' Summer Short Sleeve",
-  "Price": 19.99,
-  "Quantity": 3,
-  "OrderDate": "2/12/2025"
+  "ProductID": 5,
+  "Quantity": 1
 }
 ```
 
@@ -275,8 +269,10 @@ Example request body:
 | Status code      | Description                                                                                            |
 | ---------------- | ------------------------------------------------------------------------------------------------------ |
 | 201 Created      | Indicates that the order has been created successfully.                                                |
-| 400 Bad Request  | Indicates that the parameters provided are invalid.                                                    |
-| 401 Unauthorized | Indicates that the request has not been authenticated.  |
+| 400 Bad Request  | Invalid ProductID or Quantity                                                    |
+| 401 Unauthorized | Unauthorized (missing/invalid token)  |
+| 404 Unauthorized | Product or User not found  |
+
 
 Example response:
 
