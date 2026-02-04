@@ -367,57 +367,6 @@ Example response:
 }
 ```
 
-### Update an order
-
-**`/orders/update`**
-
-**Method:** PUT
-
-The request body needs to be in JSON format.
-
-**Parameters**
-
-| Name            | Type   | In     | Required | Description                          |
-| --------------- | ------ | ------ | -------- | ------------------------------------ |
-| `Authorization` | string | header | Yes      | The bearer token of the API client.  |
-| `OrderID`       | string | body   | Yes      | The order id.                        |
-| `CustomerName`  | string | body   | No       | The name of the customer.            |
-| `Product`  | string | body   | No      | The name of the product.            |
-| `Price`       | Number (float) | body   | No       | Price of the product e.g., 19.99. |
-| `Quantity`       | Number | body   | No       | Quantity of the product. |
-| `OrderDate`       | string (date-time) | body   | No       | Order date in "2/12/2025" format. |
-
-Note: Only send those Parameters which needs to be updated, OrderID is mandatory.
-
-Example request body:
-
-```
-{
-  "OrderID": 1374,
-  "CustomerName": "Hashi",
-  "Quantity": 5
-}
-```
-
-**Status codes**
-
-| Status code      | Description                                                                                            |
-| ---------------- | ------------------------------------------------------------------------------------------------------ |
-| 200 Ok   | Indicates that the order has been updated successfully.                                                |
-| 400 Bad Request  | Indicates that OrderID is not provided which is required.                                                    |
-| 401 Unauthorized | Indicates that the request has not been authenticated. |
-| 404 Not found    | Indicates that there is no order with the specified id associated with the API client.                 |
-
-Example response:
-
-```
-{
-    "message": "Order updated successfully and following properties have been updated",
-    "CustomerName": "Hashi",
-    "Quantity": 5
-}
-```
-
 ### Delete an order
 
 **`/orders/delete`**
