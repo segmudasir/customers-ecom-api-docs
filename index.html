@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,20 +10,21 @@
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <header class="navbar">
-    <div class="logo">
+    <a href="index.html" class="logo">
       <span class="logo-icon">⚡</span>
       <span>TechHub</span>
-    </div>
+    </a>
     <nav class="nav-links">
-      <a href="#">API Tester</a>
-      <a href="#">E-Commerce</a>
-      <a href="#">School System</a>
-      <a href="#">Geo Tools</a>
-      <a href="#">ETH Tracker</a>
+      <a href="#api-tester">API Tester</a>
+      <a href="#ecommerce">E-Commerce</a>
+      <a href="#school-system">School System</a>
+      <a href="#geo">Geo Tools</a>
+      <a href="#eth-tracker">ETH Tracker</a>
     </nav>
     <div class="nav-actions">
       <button class="btn ghost">Sign In</button>
@@ -58,8 +60,267 @@
     </div>
   </section>
 
+  <!-- API TESTER SECTION -->
+  <section class="api-tester" id="api-tester">
+    <h1><span class="gradient-text">API Tester</span></h1>
+    <p class="api-sub">
+      Test any REST API endpoint with our powerful, intuitive testing tool. Support for all HTTP methods with beautiful
+      response formatting.
+    </p>
+
+    <div class="api-container">
+      <!-- HTTP Method Selector -->
+      <div class="method-selector">
+        <button class="method-btn active" data-method="GET">GET</button>
+        <button class="method-btn" data-method="POST">POST</button>
+        <button class="method-btn" data-method="PUT">PUT</button>
+        <button class="method-btn" data-method="DELETE">DELETE</button>
+        <button class="method-btn" data-method="PATCH">PATCH</button>
+      </div>
+
+      <!-- URL Input -->
+      <div class="url-input-group">
+        <input type="text" class="url-input" placeholder="https://api.example.com/users"
+          value="https://api.example.com/users" />
+        <button class="btn primary send-btn">
+          <span>Send</span>
+        </button>
+      </div>
+
+      <!-- Response Section -->
+      <div class="response-section">
+        <h3>Response</h3>
+        <div class="response-box">
+          <p class="response-placeholder">Send a request to see the response</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ECOMMERCE SECTION -->
+  <section class="ecommerce" id="ecommerce">
+    <h1><span class="gradient-text">E-Commerce</span> Platform</h1>
+    <p class="ecommerce-sub">
+      Build stunning online stores with our powerful e-commerce components. Product listings, shopping carts, checkout
+      flows, and more.
+    </p>
+
+    <!-- Features List -->
+    <div class="features-list">
+      <div class="feature-item">• Product Management</div>
+      <div class="feature-item">• Secure Payments</div>
+      <div class="feature-item">• Inventory Tracking</div>
+      <div class="feature-item">• Analytics Dashboard</div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="products-grid">
+      <!-- Product 1 -->
+      <div class="product-card">
+        <div class="product-badge best-seller">Best Seller</div>
+        <div class="product-icon">🎧</div>
+        <h3>Wireless Pro Headphones</h3>
+        <div class="product-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-value">4.8</span>
+          <span class="reviews">(124 reviews)</span>
+        </div>
+        <div class="product-footer">
+          <span class="price">$299.99</span>
+          <div class="product-actions">
+            <button class="icon-btn">❤</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 2 -->
+      <div class="product-card">
+        <div class="product-badge new">New</div>
+        <div class="product-icon">⌚</div>
+        <h3>Smart Watch Ultra</h3>
+        <div class="product-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-value">4.9</span>
+          <span class="reviews">(89 reviews)</span>
+        </div>
+        <div class="product-footer">
+          <span class="price">$449.99</span>
+          <div class="product-actions">
+            <button class="icon-btn">❤</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 3 -->
+      <div class="product-card">
+        <div class="product-badge popular">Popular</div>
+        <div class="product-icon">⌨️</div>
+        <h3>Mechanical Keyboard</h3>
+        <div class="product-rating">
+          <span class="stars">★★★★☆</span>
+          <span class="rating-value">4.7</span>
+          <span class="reviews">(255 reviews)</span>
+        </div>
+        <div class="product-footer">
+          <span class="price">$189.99</span>
+          <div class="product-actions">
+            <button class="icon-btn">❤</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Product 4 -->
+      <div class="product-card">
+        <div class="product-badge sale">Sale</div>
+        <div class="product-icon">📷</div>
+        <h3>4K Action Camera</h3>
+        <div class="product-rating">
+          <span class="stars">★★★★★</span>
+          <span class="rating-value">4.6</span>
+          <span class="reviews">(178 reviews)</span>
+        </div>
+        <div class="product-footer">
+          <span class="price">$379.99</span>
+          <div class="product-actions">
+            <button class="icon-btn">❤</button>
+            <button class="icon-btn">🛒</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="ecommerce-cta">
+      <button class="btn primary">Explore E-Commerce →</button>
+    </div>
+  </section>
+
+  <!-- SCHOOL SYSTEM SECTION -->
+  <section class="school-system" id="school-system">
+    <h1><span class="gradient-text">School Management</span> System</h1>
+    <p class="school-sub">
+      Complete school administration solution. Manage students, courses, attendance, grades, and more with our intuitive
+      dashboard.
+    </p>
+
+    <!-- Stats Cards -->
+    <div class="stats-grid">
+      <div class="stat-card">
+        <div class="stat-icon">👥</div>
+        <div class="stat-content">
+          <div class="stat-number">2,847</div>
+          <div class="stat-label">Students</div>
+        </div>
+        <div class="stat-growth positive">↗ +12%</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📚</div>
+        <div class="stat-content">
+          <div class="stat-number">156</div>
+          <div class="stat-label">Courses</div>
+        </div>
+        <div class="stat-growth positive">↗ +6%</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">🎓</div>
+        <div class="stat-content">
+          <div class="stat-number">1,234</div>
+          <div class="stat-label">Graduates</div>
+        </div>
+        <div class="stat-growth positive">↗ +24%</div>
+      </div>
+
+      <div class="stat-card">
+        <div class="stat-icon">📅</div>
+        <div class="stat-content">
+          <div class="stat-number">42</div>
+          <div class="stat-label">Events</div>
+        </div>
+        <div class="stat-growth positive">↗ +5%</div>
+      </div>
+    </div>
+
+    <!-- Dashboard and Activity Section -->
+    <div class="school-content">
+      <!-- Dashboard Preview -->
+      <div class="dashboard-preview">
+        <h2>Dashboard Preview</h2>
+        <div class="dashboard-cards">
+          <div class="dashboard-card">
+            <div class="dashboard-icon">👨‍🎓</div>
+            <div class="dashboard-info">
+              <h3>Student Portal</h3>
+              <p>Access grades & schedule</p>
+            </div>
+            <button class="view-btn">View</button>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-icon">👨‍🏫</div>
+            <div class="dashboard-info">
+              <h3>Teacher Dashboard</h3>
+              <p>Manage classes & grades</p>
+            </div>
+            <button class="view-btn">View</button>
+          </div>
+
+          <div class="dashboard-card">
+            <div class="dashboard-icon">⚙️</div>
+            <div class="dashboard-info">
+              <h3>Admin Panel</h3>
+              <p>Full system control</p>
+            </div>
+            <button class="view-btn">View</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Recent Activity -->
+      <div class="recent-activity">
+        <h2>Recent Activity</h2>
+        <div class="activity-list">
+          <div class="activity-item">
+            <div class="activity-content">
+              <h4>New student enrolled</h4>
+              <p>Mathematics 101</p>
+            </div>
+            <span class="activity-time">2 min ago</span>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-content">
+              <h4>Grade submitted</h4>
+              <p>Physics Final Exam</p>
+            </div>
+            <span class="activity-time">15 min ago</span>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-content">
+              <h4>Class scheduled</h4>
+              <p>Chemistry Lab Session</p>
+            </div>
+            <span class="activity-time">1 hour ago</span>
+          </div>
+
+          <div class="activity-item">
+            <div class="activity-content">
+              <h4>Attendance marked</h4>
+              <p>English Literature</p>
+            </div>
+            <span class="activity-time">2 hours ago</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- GEO TOOLS -->
-  <section class="geo">
+  <section class="geo" id="geo">
     <h2><span class="gradient-text">Geo Tools</span> Suite</h2>
     <p class="geo-sub">
       Professional geospatial tools for mapping, navigation, and location-based services.
@@ -94,5 +355,155 @@
     </div>
   </section>
 
+  <!-- ETH TRACKER SECTION -->
+  <section class="eth-tracker" id="eth-tracker">
+    <h1><span class="gradient-text">ETH Tracker</span></h1>
+    <p class="eth-sub">
+      Real-time Ethereum price tracking with live updates, historical data, and market analytics.
+    </p>
+
+    <!-- Price Card -->
+    <div class="price-card">
+      <div class="price-header">
+        <div class="eth-icon">◈</div>
+        <div class="eth-info">
+          <div class="eth-label">Ethereum</div>
+          <div class="eth-symbol">ETH</div>
+        </div>
+      </div>
+      <div class="price-main">
+        <span class="current-price">$2,445.9</span>
+        <span class="price-change positive">↗ +3.74%</span>
+      </div>
+      <div class="price-footer">
+        <span class="update-time">⏱ Updated 6:57:33 AM</span>
+        <button class="refresh-btn">🔄 Refresh</button>
+      </div>
+    </div>
+
+    <!-- Market Stats -->
+    <div class="market-stats">
+      <div class="market-stat">
+        <div class="stat-label">24h High</div>
+        <div class="stat-value positive">$2,456.32</div>
+      </div>
+      <div class="market-stat">
+        <div class="stat-label">24h Low</div>
+        <div class="stat-value negative">$2,312.18</div>
+      </div>
+      <div class="market-stat">
+        <div class="stat-label">Market Cap</div>
+        <div class="stat-value">$290.2B</div>
+      </div>
+      <div class="market-stat">
+        <div class="stat-label">24h Volume</div>
+        <div class="stat-value">$12.4B</div>
+      </div>
+    </div>
+
+    <!-- Price Chart -->
+    <div class="chart-container">
+      <div class="chart-header">
+        <h2>Price Chart (24h)</h2>
+        <div class="chart-tabs">
+          <button class="chart-tab">1H</button>
+          <button class="chart-tab active">24H</button>
+          <button class="chart-tab">7D</button>
+          <button class="chart-tab">30D</button>
+        </div>
+      </div>
+      <div class="chart-placeholder">
+        <svg viewBox="0 0 800 300" class="price-chart">
+          <defs>
+            <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
+              <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.3" />
+              <stop offset="100%" stop-color="#22d3ee" stop-opacity="0" />
+            </linearGradient>
+          </defs>
+          <path d="M 0 250 L 100 220 L 200 200 L 300 240 L 400 180 L 500 160 L 600 140 L 700 120 L 800 100"
+            stroke="#22d3ee" stroke-width="2" fill="none" />
+          <path
+            d="M 0 250 L 100 220 L 200 200 L 300 240 L 400 180 L 500 160 L 600 140 L 700 120 L 800 100 L 800 300 L 0 300 Z"
+            fill="url(#chartGradient)" />
+          <circle cx="800" cy="100" r="4" fill="#22d3ee" />
+        </svg>
+        <div class="chart-labels">
+          <span>00:00</span>
+          <span>04:00</span>
+          <span>08:00</span>
+          <span>12:00</span>
+          <span>16:00</span>
+          <span>20:00</span>
+          <span>Now</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Action Buttons -->
+    <div class="eth-actions">
+      <button class="btn primary">Start Trading →</button>
+      <button class="btn outline">View More Cryptos</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <div class="footer-logo">
+          <span class="logo-icon">⚡</span>
+          <span>TechHub</span>
+        </div>
+        <p class="footer-tagline">Your all-in-one platform for developer tools, e-commerce solutions, and real-time data
+          tracking.</p>
+        <div class="social-links">
+          <a href="#" class="social-icon">&#xe902;</a>
+          <a href="#" class="social-icon">&#xe901;</a>
+          <a href="#" class="social-icon">&#xe904;</a>
+          <a href="#" class="social-icon">&#x2709;</a>
+        </div>
+      </div>
+
+      <div class="footer-links">
+        <div class="footer-column">
+          <h4>Products</h4>
+          <a href="api-tester.html">API Tester</a>
+          <a href="ecommerce.html">E-Commerce</a>
+          <a href="school-system.html">School System</a>
+          <a href="index.html#geo">Geo Tools</a>
+          <a href="eth-tracker.html">ETH Tracker</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Resources</h4>
+          <a href="#">Documentation</a>
+          <a href="#">API Reference</a>
+          <a href="#">Tutorials</a>
+          <a href="#">Blog</a>
+          <a href="#">Changelog</a>
+        </div>
+
+        <div class="footer-column">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Careers</a>
+          <a href="#">Contact</a>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 TechHub. All rights reserved.</p>
+      <div class="footer-legal">
+        <a href="#">Privacy</a>
+        <a href="#">Terms</a>
+        <a href="#">Cookies</a>
+      </div>
+    </div>
+  </footer>
+
 </body>
+
 </html>
