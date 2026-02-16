@@ -1176,7 +1176,7 @@ body {
 /* RESPONSIVE */
 @media (max-width: 768px) {
   .navbar {
-    padding: 16px 24px;
+    padding: 1px 1px;
   }
 
   .nav-links {
