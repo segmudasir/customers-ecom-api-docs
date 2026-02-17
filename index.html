@@ -26,10 +26,10 @@
 
   <header id="header">
     <nav id="main-nav" class="navbar navbar-default navbar-fixed-top" role="banner">
-      <span class="logo">
+      <a href="index.html" class="logo">
         <i class="fa fa-leaf" style="color: #19BD9B; font-size: 24px; margin-right: 5px;"></i>
         TechHub
-      </span>
+      </a>
       <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -261,18 +261,21 @@
     </div>
   </section>
 
-  <section id="request-license" style="margin-left: -100px; padding-left: -150px; margin-top: 100px; padding-top: 100px; margin-bottom: 100px; padding-bottom: 100px; background: #19BD9B; color: #fff;">
+  <section id="request-license"
+    style="margin-left: -100px; padding-left: -150px; margin-top: 100px; padding-top: 100px; margin-bottom: 100px; padding-bottom: 100px; background: #19BD9B; color: #fff;">
     <div class="container">
       <div class="row">
         <div class="col-md-4">
           <div class="section-header" style="text-align: left; margin-left: -100px; padding: 0;">
             <h2 class="section-title wow fadeInDown" style="color: #f01b4c; text-align: left; margin-top: 0;">Request
               License</h2>
-            <p class="wow fadeInDown" style="color: rgba(255, 255, 255, 0.97); font-size: 16px; line-height: 37px">Please Enter your Name, Email Address, Select the Product for which license is Requiered and for how many days. 
-This will generate your license key instantly.</p>
+            <p class="wow fadeInDown" style="color: rgba(255, 255, 255, 0.97); font-size: 16px; line-height: 37px">
+              Please Enter your Name, Email Address, Select the Product for which license is Requiered and for how many
+              days.
+              This will generate your license key instantly.</p>
             <div style="margin-top: 30px;" class="wow fadeInDown">
               <address style="color: #fff; font-size: 16px; line-height: 37px;">
-                <strong >Standard License includes:</strong><br>
+                <strong>Standard License includes:</strong><br>
                 Full feature access<br>
                 Priority developer support<br>
                 Regular security updates
@@ -315,7 +318,7 @@ This will generate your license key instantly.</p>
                       Product</label>
                     <select id="license-product" name="product" class="form-control"
                       style="background: #f8fafc; border: 2px solid #aecffa; height: 50px; border-radius: 10px; color: #1e293b;"
-                      required>                     
+                      required>
                       <option value="Geo Tools" selected>Geo Tools</option>
                       <option value="ETH Tracker">ETH Tracker</option>
                     </select>
@@ -346,7 +349,7 @@ This will generate your license key instantly.</p>
                 style="margin-top: 20px; font-family: 'Inter', sans-serif; font-size: 15px; line-height: 1.8; color: #475569;">
                 <div
                   style="background: #fff; padding: 15px; border-radius: 8px; border: 1px dashed #cbd5e1; margin-bottom: 15px;">
-                  
+
                   <span id="res-key"
                     style="color: #FF4500; font-size: 20px; font-weight: 800; font-family: 'Monaco', 'Consolas', monospace; word-break: break-all;"
                     onclick="navigator.clipboard.writeText(this.innerText); alert('Copied to clipboard!')"></span>

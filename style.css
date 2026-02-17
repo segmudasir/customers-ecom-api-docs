@@ -15,17 +15,23 @@ body {
 /* Navbar container */
 .navbar {
   display: flex;
-  align-items: center; /* vertically center logo and links */
-  justify-content: space-between; /* space between logo and nav */
-  background-color: #222; /* dark background */
+  align-items: center;
+  /* vertically center logo and links */
+  justify-content: space-between;
+  /* space between logo and nav */
+  background-color: #222;
+  /* dark background */
   padding: 0 40px;
-  height: 80px; /* fixed height for alignment */
+  height: 100px;
+  /* fixed height for alignment */
 }
+
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  font-family: 'Playfair Display', serif; /* elegant serif like first image */
+  font-family: 'Playfair Display', serif;
+  /* elegant serif like first image */
   font-weight: 700;
   font-size: 28px;
   color: #fff;
@@ -50,11 +56,12 @@ body {
 
 /* Nav links */
 .nav-links a {
-  font-family: 'Outfit', sans-serif; /* clean modern font */
-  font-weight: 600;
-  font-size: 14px;
+  font-family: 'Outfit', sans-serif;
+  /* clean modern font */
+  font-weight: 500;
+  font-size: 16px;
   color: #fff;
-  text-transform: uppercase;
+  text-transform: none;
   text-decoration: none;
   transition: color 0.3s;
 }
@@ -81,10 +88,9 @@ body {
 /* ==================== BOOTSTRAP OVERRIDE SAFE ==================== */
 #main-nav.navbar-default .navbar-nav>li>a {
   font-family: 'Outfit', sans-serif !important;
-  font-size: 14px !important;
-  font-weight: 600 !important;
-  letter-spacing: 1px !important;
-  text-transform: uppercase !important;
+  font-size: 16px !important;
+  font-weight: 500 !important;
+  text-transform: none !important;
   color: #fff !important;
   transition: color 0.3s !important;
 }
@@ -105,7 +111,8 @@ body {
   }
 
   .nav-links {
-    display: none; /* mobile menu toggle can be added via JS */
+    display: none;
+    /* mobile menu toggle can be added via JS */
   }
 
   .nav-actions {
@@ -1054,11 +1061,12 @@ body {
 }
 
 /* ==================== FOOTER ==================== */
-.footer {
-  background: #f9f9f9;
-  border-top: 1px solid #eee;
-  padding: 60px 40px 30px;
+#footer {
+  background: #222;
+  border-top: 1px solid #333;
+  padding: 30px 40px 15px;
   margin-top: 80px;
+  color: #fff;
 }
 
 .footer-content {
@@ -1084,7 +1092,7 @@ body {
 }
 
 .footer-tagline {
-  color: #94a3b8;
+  color: #a0aec0;
   font-size: 14px;
   line-height: 1.6;
   margin-bottom: 24px;
@@ -1126,12 +1134,12 @@ body {
   font-size: 14px;
   font-weight: 600;
   margin-bottom: 16px;
-  color: #282828;
+  color: #fff;
 }
 
 .footer-column a {
   display: block;
-  color: #94a3b8;
+  color: #a0aec0;
   text-decoration: none;
   font-size: 14px;
   margin-bottom: 12px;
@@ -1153,7 +1161,7 @@ body {
 }
 
 .footer-bottom p {
-  color: #64748b;
+  color: #a0aec0;
   font-size: 13px;
 }
 
@@ -1163,14 +1171,14 @@ body {
 }
 
 .footer-legal a {
-  color: #64748b;
+  color: #94a3b8;
   text-decoration: none;
   font-size: 13px;
   transition: color 0.2s;
 }
 
 .footer-legal a:hover {
-  color: #19BD9B;
+  color: #fff;
 }
 
 /* RESPONSIVE */
