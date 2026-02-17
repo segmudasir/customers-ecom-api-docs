@@ -45,11 +45,11 @@
         <div class="collapse navbar-collapse navbar-right">
           <ul class="nav navbar-nav">
             <li class="scroll active"><a href="#home">Home</a></li>
-            <li class="scroll"><a href="api-tester.html">API Tester</a></li>
-            <li class="scroll"><a href="ecommerce.html">E-Commerce</a></li>
-            <li class="scroll"><a href="school-system.html">School System</a></li>
+            <li class="scroll"><a href="#api-tester">API Tester</a></li>
+            <li class="scroll"><a href="#ecommerce">E-Commerce</a></li>
+            <li class="scroll"><a href="#school-system">School System</a></li>
             <li class="scroll"><a href="#geo">Geo Tools</a></li>
-            <li class="scroll"><a href="eth-tracker.html">ETH Tracker</a></li>
+            <li class="scroll"><a href="#eth-tracker">ETH Tracker</a></li>
             <li class="scroll"><a href="#request-license">Request License</a></li>
             <li class="scroll"><a href="#contact-us">Contact</a></li>
           </ul>
@@ -119,8 +119,9 @@
 
             <!-- URL Input -->
             <div class="url-input-group">
-              <input type="text" class="url-input" placeholder="https://api.example.com/users"
-                value="https://api.example.com/users" />
+              <input type="text" class="url-input"
+                placeholder="https://customers-ecom-api.onrender.com/customers?CustomerID=91"
+                value="https://customers-ecom-api.onrender.com/customers?CustomerID=91" />
               <button class="btn btn-primary send-btn">
                 <span>Send</span>
               </button>
@@ -232,7 +233,8 @@
         </div>
       </div>
       <div class="text-center" style="margin-top: 50px;">
-        <a href="ecommerce.html" class="btn btn-explore">Explore E-Commerce →</a>
+        <a href="#" class="btn btn-explore" onclick="return false;" style="cursor: default; opacity: 0.7;">Coming Soon
+          →</a>
       </div>
     </div>
   </section>
@@ -253,7 +255,8 @@
             <h2>$2,445.9</h2>
             <span class="price-change positive">↗ +3.74%</span>
             <div style="margin-top: 20px;">
-              <a href="eth-tracker.html" class="btn btn-primary">Open Live Tracker</a>
+              <a href="#" class="btn btn-primary" onclick="return false;" style="cursor: default; opacity: 0.7;">Coming
+                Soon</a>
             </div>
           </div>
         </div>
@@ -275,7 +278,7 @@
               This will generate your license key instantly.</p>
             <div style="margin-top: 30px;" class="wow fadeInDown">
               <address style="color: #fff; font-size: 16px; line-height: 37px;">
-                <strong>Standard License includes:</strong><br>
+                <strong class="license-title">Standard License includes:</strong><br>
                 Full feature access<br>
                 Priority developer support<br>
                 Regular security updates
@@ -475,6 +478,71 @@
       } catch (err) {
         console.error(err);
         alert('Could not connect to the license server.');
+      }
+    });
+  </script>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      // API Tester logic
+      const apiContainer = document.querySelector('.api-container');
+      if (apiContainer) {
+        const methodBtns = apiContainer.querySelectorAll('.method-btn');
+        const urlInput = apiContainer.querySelector('.url-input');
+        const sendBtn = apiContainer.querySelector('.send-btn');
+        const responseBox = apiContainer.querySelector('.response-box');
+        let currentMethod = 'GET';
+
+        methodBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            methodBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            currentMethod = btn.getAttribute('data-method');
+          });
+        });
+
+        function syntaxHighlight(json) {
+          if (typeof json != 'string') {
+            json = JSON.stringify(json, undefined, 2);
+          }
+          json = json.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+          return json.replace(/("(\\u[a-zA-Z0-9]{4}|\\[^u]|[^\\"])*"(\s*:)?|\b(true|false|null)\b|-?\d+(?:\.\d*)?(?:[eE][+-]?\d+)?)/g, function (match) {
+            var cls = 'json-number';
+            if (/^"/.test(match)) {
+              if (/:$/.test(match)) {
+                cls = 'json-key';
+              } else {
+                cls = 'json-string';
+              }
+            } else if (/true|false/.test(match)) {
+              cls = 'json-boolean';
+            } else if (/null/.test(match)) {
+              cls = 'json-null';
+            }
+            return '<span class="' + cls + '">' + match + '</span>';
+          });
+        }
+
+        sendBtn.addEventListener('click', async () => {
+          // Restrict homepage demo to GET only
+          if (currentMethod !== 'GET') {
+            responseBox.innerHTML = '<p class="response-placeholder" style="color: #666;">Demo restricted to GET method. <br> Use the button below for full API testing.</p>';
+            return;
+          }
+
+          const url = urlInput.value;
+          responseBox.innerHTML = '<p class="response-placeholder">Sending request...</p>';
+
+          try {
+            const response = await fetch(url, {
+              method: currentMethod
+            });
+            const data = await response.json();
+            // Removed inline color to allow CSS highlighting to work
+            responseBox.innerHTML = '<pre style="text-align: left; width: 100%; background: transparent; border: none;">' + syntaxHighlight(data) + '</pre>';
+          } catch (error) {
+            responseBox.innerHTML = '<p class="response-placeholder" style="color: #ef4444;">Error: ' + error.message + '</p>';
+          }
+        });
       }
     });
   </script>

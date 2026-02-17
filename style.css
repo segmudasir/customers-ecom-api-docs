@@ -372,7 +372,7 @@ body {
 }
 
 .api-container {
-  background: #f9f9f9;
+  background: #51bdef;
   border: 1px solid #eee;
   border-radius: 20px;
   padding: 32px;
@@ -386,7 +386,7 @@ body {
 
 .method-btn {
   padding: 10px 20px;
-  background: #eee;
+  background: #a5ea73;
   border: 1px solid #ddd;
   border-radius: 10px;
   color: #64748b;
@@ -397,11 +397,11 @@ body {
 }
 
 .method-btn:hover {
-  background: #e2e8f0;
+  background: #ed9a5c;
 }
 
 .method-btn.active {
-  background: rgba(25, 189, 155, 0.15);
+  background: #ed9a5c;
   color: #19BD9B;
   border-color: rgba(25, 189, 155, 0.3);
 }
@@ -449,7 +449,7 @@ body {
 }
 
 .response-placeholder {
-  color: #64748b;
+  color: #ecb529;
   font-style: italic;
 }
 
@@ -1223,3 +1223,48 @@ body {
     text-align: center;
   }
 }
+
+.license-title {
+  color: #1f4b84;
+  font-size: 18px;
+}
+
+/* API Response Highlighting */
+.response-box pre {
+  font-size: 20px !important;
+  /* Increased font size as requested */
+  line-height: 1.5;
+  font-family: 'Monaco', 'Consolas', monospace;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  color: #282828;
+  /* Default color */
+}
+
+.json-key {
+  color: #881391 !important;
+  font-weight: bold;
+}
+
+/* Purple for keys */
+.json-string {
+  color: #1a1aa6 !important;
+}
+
+/* Blue for strings */
+.json-number {
+  color: #1c00cf !important;
+}
+
+/* Darker blue for numbers */
+.json-boolean {
+  color: #0000ff !important;
+}
+
+/* Bright blue for booleans */
+.json-null {
+  color: #808080 !important;
+}
+
+/* Grey for null */
